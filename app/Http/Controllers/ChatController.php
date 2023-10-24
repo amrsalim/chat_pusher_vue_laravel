@@ -7,7 +7,7 @@ use App\Models\Message;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class ChatController extends Controller
 {
 
 

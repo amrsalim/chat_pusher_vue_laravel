@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/send', function () {
     event(new \App\Events\chat('amr'));
 });
-Route::get("/chat/{id}" , ['App\Http\Controllers\RoomController' , 'show' ]);
+Route::get("/chat/{id}" , ['App\Http\Controllers\ChatController', 'show' ]);
 
 
 Auth::routes();

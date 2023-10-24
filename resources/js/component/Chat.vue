@@ -58,7 +58,7 @@ async function sendMessage() {
 
 }
 
-async  function getMassageRoom() {
+async  function getMassage() {
 
   const response = await fetch(`/api/chats/${props.id}`);
   const data = await response.json();
@@ -70,12 +70,12 @@ async  function getMassageRoom() {
 }
 
 onMounted(async () => {
-  await getMassageRoom();
+  await getMassage();
   Echo.channel('chat').listen('.send-message', async (data) => {
     // console.log(data);
     // console.log(props.id);
 
-    await getMassageRoom();
+    await getMassage();
   });
 
 
